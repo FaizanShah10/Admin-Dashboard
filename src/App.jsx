@@ -4,6 +4,9 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { FiSettings } from 'react-icons/fi';
 import { Tooltip } from 'react-tooltip'
 import './App.css'
+import Footer from './Components/Footer'
+import Navbar from './Components/Navbar'
+import Sidebar from './Components/Sidebar'
 
 const App = () => {
 
@@ -33,16 +36,15 @@ const App = () => {
           {/* SideBar */}
           {activeMenu ? (
             <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white ">
-              <h1>Sidebar</h1>
+              <h1><Sidebar/></h1>
             </div>
           ) : (
             <div className="w-0 dark:bg-secondary-dark-bg">
-              <h1>Sidebar Close</h1>
+              <h1><Sidebar/></h1>
             </div>  
           )}
 
           {/* Navbar */}
-
           <div
           className={
             activeMenu
@@ -51,8 +53,45 @@ const App = () => {
           }
           >
               <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full ">
-               <h1>Navbar</h1>
+               <h1><Navbar/></h1>
             </div>
+          </div>
+
+          {/* Routes */}
+          <div>
+            <Routes>
+              {/* Dashboard */}
+              <Route path="/" element={"ECommerce"} />
+              <Route path="/ecommerce" element={"ECommerce"} />
+
+              {/* Pages */}
+              <Route path="/orders" element={"Orders"} />
+              <Route path="/employees" element={"Employees"} />
+              <Route path="/customers" element={"Customers"} />
+
+
+              {/* Apps */}
+              <Route path="/kanban" element={"Kanban"} />
+              <Route path="/editor" element={"editor"} />
+              <Route path="/calender" element={"calender"} />
+              <Route path="/color-picker" element={"ColorPicker"} />
+
+              {/* charts  */}
+              <Route path="/line" element={"Line"} />
+              <Route path="/area" element={"Area"} />
+              <Route path="/bar" element={"bar"} />
+              <Route path="/pie" element={"pie"} />
+              <Route path="/financial" element={"Financial"} />
+              <Route path="/color-mapping" element={"color Mapping"} />
+              <Route path="/pyramid" element={"pyramid"} />
+              <Route path="/stacked" element={"stacked"} />
+
+            </Routes>
+          </div>
+
+          {/* Footer */}
+          <div>
+            <Footer/>
           </div>
           
         </div>
