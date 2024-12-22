@@ -7,10 +7,19 @@ import './App.css'
 import Footer from './Components/Footer'
 import Navbar from './Components/Navbar'
 import Sidebar from './Components/Sidebar'
+import ECommerce from './Dashboard/ECommerce';
+import Orders from './Pages/Orders';
+import Employees from './Pages/Employees';
+import Customers from './Pages/Customers';
+import Kanban from './Apps/Kanban'
+import Calender from './Apps/Calender'
+import ColorPicker from './Apps/ColorPicker'
+import Editor from './Apps/Editor'
 
 const App = () => {
 
   const activeMenu = true
+
   
 
   return (
@@ -61,20 +70,20 @@ const App = () => {
           <div>
             <Routes>
               {/* Dashboard */}
-              <Route path="/" element={"ECommerce"} />
-              <Route path="/ecommerce" element={"ECommerce"} />
+              <Route path="/" element={<ECommerce/>} />
+              <Route path="/ecommerce" element={<ECommerce/>} />
 
               {/* Pages */}
-              <Route path="/orders" element={"Orders"} />
-              <Route path="/employees" element={"Employees"} />
-              <Route path="/customers" element={"Customers"} />
+              <Route path="/orders" element={<Orders/>} />
+              <Route path="/employees" element={<Employees/>} />
+              <Route path="/customers" element={<Customers/>} />
 
 
               {/* Apps */}
-              <Route path="/kanban" element={"Kanban"} />
-              <Route path="/editor" element={"editor"} />
-              <Route path="/calender" element={"calender"} />
-              <Route path="/color-picker" element={"ColorPicker"} />
+              <Route path="/kanban" element={<Kanban/>} />
+              <Route path="/editor" element={<Editor/>} />
+              <Route path="/calender" element={<Calender/>} />
+              <Route path="/color-picker" element={<ColorPicker/>} />
 
               {/* charts  */}
               <Route path="/line" element={"Line"} />
