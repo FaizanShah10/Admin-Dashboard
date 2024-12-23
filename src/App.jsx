@@ -16,12 +16,13 @@ import Calender from './Apps/Calender'
 import ColorPicker from './Apps/ColorPicker'
 import Editor from './Apps/Editor'
 
+import { useStateContext } from './Context/ContextProvider'
+
 const App = () => {
 
-  const activeMenu = true
+  const { activeMenu } = useStateContext()
 
   
-
   return (
     <div>
       <BrowserRouter>
