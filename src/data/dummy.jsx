@@ -170,7 +170,7 @@ export const barPrimaryYAxis = {
   lineStyle: { width: 0 },
   labelStyle: { color: 'transparent' },
 };
-const areaChartData = [
+export const areaChartData = [
   [
     { x: new Date(2002, 0, 1), y: 2.2 },
     { x: new Date(2003, 0, 1), y: 3.4 },
@@ -479,7 +479,6 @@ export const links = [
       },
     ],
   },
-
   {
     title: 'Pages',
     links: [
