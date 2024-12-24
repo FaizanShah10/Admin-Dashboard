@@ -65,7 +65,7 @@ const App = () => {
               <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full ">
                <h1><Navbar/></h1>
             </div>
-          </div>
+          
 
           {/* Routes */}
           <div>
@@ -98,10 +98,12 @@ const App = () => {
 
             </Routes>
           </div>
+          <Footer/>
+          </div>
 
           {/* Footer */}
           <div>
-            <Footer/>
+            
           </div>
           
         </div>
