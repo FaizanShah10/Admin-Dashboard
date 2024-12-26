@@ -83,8 +83,6 @@ const Employees = () => {
             </table>
           </div>
 
-        {/* Pagination */}
-
       <div className="flex justify-center items-center gap-2 mt-4 mb-6">
         {Array.from({ length: totalPages }, (_, index) => (
           <button
