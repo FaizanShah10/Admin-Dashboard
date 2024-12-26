@@ -3081,14 +3081,15 @@ export const dropdownData = [
     Time: 'May 2021',
   },
 ];
-export const SparklineAreaData = [
-  { x: 1, yval: 2 },
-  { x: 2, yval: 6 },
-  { x: 3, yval: 8 },
-  { x: 4, yval: 5 },
-  { x: 5, yval: 10 },
 
+export const SparklineAreaData = [
+  { label: 'Jan', value: 10 },
+  { label: 'Feb', value: 15 },
+  { label: 'Mar', value: 8 },
+  { label: 'Apr', value: 12 },
+  { label: 'May', value: 20 },
 ];
+
 
 export const lineCustomSeries = [
   { dataSource: lineChartData[0],
