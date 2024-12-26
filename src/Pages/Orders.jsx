@@ -20,12 +20,12 @@ const Orders = () => {
 
   return (
     <div>
-      <div className="w-full h-40 bg-gray-200 rounded-md text-black flex justify-center items-center mb-10">
+      <div className="w-full h-32 bg-gray-200 rounded-md text-black flex justify-center items-center mb-10">
         <h2 className="text-3xl font-semibold">Orders</h2>
       </div>
       <div className="relative overflow-x-auto p-10 rounded-md bg-gray-100 m-10">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-200 dark:bg-gray-700 dark:text-gray-400">
+          <thead className="text-xs text-gray-700 uppercase bg-gray-200  dark:bg-gray-700 dark:text-gray-400">
             <tr>
               <th scope="col" className="px-6 py-3">Image</th>
               <th scope="col" className="px-6 py-3">Item</th>
@@ -39,24 +39,36 @@ const Orders = () => {
             {currentOrders.map((order, index) => (
               <tr
                 key={index}
-                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                className="bg-white hover:bg-gray-100 border-b dark:bg-gray-800 dark:border-gray-700"
               >
                 <td className="px-6 py-4">
                   <img
                     className="w-16 h-16 rounded-md object-cover"
                     src={order.ProductImage}
-                    alt={order.item}
+                    alt={order.OrderItems}
                   />
                 </td>
                 <th
                   scope="row"
                   className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  {order.item}
+                  {order.OrderItems}
                 </th>
                 <td className="px-6 py-4">{order.CustomerName}</td>
                 <td className="px-6 py-4">{order.TotalAmount}</td>
-                <td className="px-6 py-4">{order.Status}</td>
+                <td className="px-6 py-4">
+                  <span className={`px-3 py-1 rounded-full text-white ${
+                      order.Status === 'pending'
+                        ? 'bg-yellow-500'
+                        : order.Status === 'complete'
+                        ? 'bg-green-500'
+                        : order.Status === 'active'
+                        ? 'bg-cyan-500'
+                        : 'bg-red-500'
+                    }`}>  
+                    {order.Status}
+                  </span>
+                </td>
                 <td className="px-6 py-4">{order.OrderID}</td>
               </tr>
             ))}
