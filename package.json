@@ -17,6 +17,7 @@
     "@fullcalendar/interaction": "^6.1.15",
     "@fullcalendar/react": "^6.1.15",
     "@fullcalendar/timegrid": "^6.1.15",
+    "@lourenci/react-kanban": "^2.1.0",
     "@mui/material": "^6.3.0",
     "@mui/x-charts": "^7.23.2",
     "@syncfusion/ej2": "^28.1.33",
