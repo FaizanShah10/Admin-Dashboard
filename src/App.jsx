@@ -17,10 +17,11 @@ import ColorPicker from './Apps/ColorPicker'
 import Editor from './Apps/Editor/Editor'
 
 import { useStateContext } from './Context/ContextProvider'
+import ThemeSetting from './Components/ThemeSetting';
 
 const App = () => {
 
-  const { activeMenu } = useStateContext()
+  const { activeMenu, themeSettings, setThemeSettings, currentColor } = useStateContext()
 
   
   return (
@@ -34,10 +35,10 @@ const App = () => {
               position="Top"
             >
               <button
-                style={{ background: "Blue", borderRadius: '50%' }}
+                style={{ background: "blue", borderRadius: '50%' }}
                 className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
               >
-                <FiSettings />
+                <FiSettings onClick={() => setThemeSettings(true)} />
               </button>
 
             </div>
@@ -65,6 +66,8 @@ const App = () => {
               <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full ">
                <h1><Navbar/></h1>
             </div>
+
+          { themeSettings && <ThemeSetting/>}
           
 
           {/* Routes */}
