@@ -3119,7 +3119,7 @@ export const lineCustomSeries = [
 ];
 
 export const pieChartData = [
-  { x: 'Labour', y: 18, text: '18%' },
+  { x: 'Labour', y: 18, text: '20%' },
   { x: 'Legal', y: 8, text: '8%' },
   { x: 'Production', y: 15, text: '15%' },
   { x: 'License', y: 11, text: '11%' },

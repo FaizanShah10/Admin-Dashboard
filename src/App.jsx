@@ -16,8 +16,12 @@ import Calender from './Apps/Calender'
 import ColorPicker from './Apps/ColorPicker'
 import Editor from './Apps/Editor/Editor'
 
+import Line from './Charts/Line'
+import Area from './Charts/Area';
+
 import { useStateContext } from './Context/ContextProvider'
 import ThemeSetting from './Components/ThemeSetting';
+import Pie from './Charts/Pie';
 
 const App = () => {
 
@@ -90,10 +94,10 @@ const App = () => {
               <Route path="/color-picker" element={<ColorPicker/>} />
 
               {/* charts  */}
-              <Route path="/line" element={"Line"} />
-              <Route path="/area" element={"Area"} />
+              <Route path="/line" element={<Line/>} />
+              <Route path="/area" element={<Area/>} />
               <Route path="/bar" element={"bar"} />
-              <Route path="/pie" element={"pie"} />
+              <Route path="/pie" element={<Pie/>} />
               <Route path="/financial" element={"Financial"} />
               <Route path="/color-mapping" element={"color Mapping"} />
               <Route path="/pyramid" element={"pyramid"} />
