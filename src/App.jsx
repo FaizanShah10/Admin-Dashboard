@@ -21,13 +21,13 @@ import ThemeSetting from './Components/ThemeSetting';
 
 const App = () => {
 
-  const { activeMenu, themeSettings, setThemeSettings, currentColor } = useStateContext()
+  const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode } = useStateContext()
 
   
   return (
-    <div>
+    <div className={`${currentMode === 'Dark' ? 'dark' : ''}`}>
       <BrowserRouter>
-        <div className="flex relative dark:bg-main-dark-bg">
+        <div className="flex relative dark:bg-zinc-900">
           {/* Setting button */}
           <div className="fixed right-4 bottom-4" style={{ zIndex: '1000' }}>
             <div
@@ -35,7 +35,7 @@ const App = () => {
               position="Top"
             >
               <button
-                style={{ background: "blue", borderRadius: '50%' }}
+                style={{ backgroundColor: currentColor, borderRadius: '50%' }}
                 className="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
               >
                 <FiSettings onClick={() => setThemeSettings(true)} />

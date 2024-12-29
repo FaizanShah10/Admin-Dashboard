@@ -4,8 +4,12 @@ import { BsDot } from 'react-icons/bs';
 import { earningData, SparklineAreaData } from '../data/dummy';
 import SparkLine from '../Charts/SparkLine';
 import Stacked from '../Charts/Stacked';
+import { useStateContext } from '../Context/ContextProvider';
 
 const ECommerce = () => {
+
+  const {currentColor} = useStateContext()
+
   return (
     <div className="p-4">
       {/* Cards Section */}
@@ -13,10 +17,10 @@ const ECommerce = () => {
         {earningData.map((card, index) => (
           <div
             key={index}
-            className="bg-white dark:bg-secondary-dark-bg p-4 rounded-lg shadow-md flex items-center gap-4"
+            className="bg-white dark:bg-zinc-600 dark:text-gray-200 p-4 rounded-lg shadow-md flex items-center gap-4"
           >
             <div
-              className="w-12 h-12 flex items-center justify-center rounded-full"
+              className="w-12 h-12 flex items-center justify-center rounded-full dark:text-black"
               style={{ backgroundColor: card.iconBg }}
             >
               {card.icon}
@@ -39,7 +43,7 @@ const ECommerce = () => {
       {/* Revenue Section */}
       <div className="flex flex-col sm:flex-row gap-6 justify-between items-center sm:items-start mx-auto max-w-full">
         {/* Left Side */}
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl w-full sm:w-[48%] p-4">
+        <div className="bg-white dark:text-gray-200 dark:bg-zinc-700 rounded-2xl w-full sm:w-[48%] p-4">
           <p className="font-semibold text-xl">Revenue Updates</p>
           <div className="mt-4">
             <p>
@@ -74,7 +78,11 @@ const ECommerce = () => {
           </div>
 
           <div className="mt-5">
-            <button className="px-3 py-3 bg-blue-500 rounded-md text-white text-sm">
+            <button 
+            className={`px-3 py-3 rounded-md text-white text-sm`}
+            style={{backgroundColor: currentColor}}
+            >
+
               Download Report
             </button>
           </div>
