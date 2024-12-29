@@ -25,7 +25,7 @@ function ControlledBoard() {
 const Kanban = () => {
   return (
     <>
-      <div className="w-full h-32 bg-gray-200 rounded-md text-black flex justify-center items-center mb-10">
+      <div className="w-full h-32 bg-gray-200 dark:bg-zinc-800 rounded-md text-black dark:text-gray-200 flex justify-center items-center mb-10">
         <h2 className="text-3xl font-semibold">Kanban</h2>
       </div>
       <div className="flex justify-center">

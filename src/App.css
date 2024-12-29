@@ -48,6 +48,7 @@
 
 
 /* Kanban */
+/* Light Mode */
 .react-kanban-card {
   background-color: rgb(240, 240, 240);
   color: black;
@@ -62,6 +63,23 @@
   background-color: white;
   color: blue;
 }
+
+/* Dark Mode */
+.dark .react-kanban-card {
+  background-color: #27272a;
+  color: #e5e7eb; /* Tailwind's gray-200 */
+}
+
+.dark .react-kanban-card--dragging {
+  background-color: #374151; /* Slightly lighter shade */
+  color: #e5e7eb;
+}
+
+.dark .react-kanban-column {
+  background-color: #383839; /* Slightly lighter shade */
+  color: #e5e7eb;
+}
+
 
 /* Editor */
 :root {
@@ -137,6 +155,7 @@ code {
   margin: 0 auto 48px;
 }
 
+
 .editor {
   position: relative;
   margin: auto; 
@@ -148,6 +167,17 @@ code {
   border-radius: 8px; 
   background-color: var(--color-white);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* dark Mode */
+.dark .editor {
+  background-color: #27272a;
+  color: #e5e7eb;
+}
+
+.dark .menu {
+  background-color: #2a2a2b;
+  color: #e5e7eb;
 }
 
 .menu {
