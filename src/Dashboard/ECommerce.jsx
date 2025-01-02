@@ -17,7 +17,7 @@ const ECommerce = () => {
         {earningData.map((card, index) => (
           <div
             key={index}
-            className="bg-white dark:bg-zinc-600 dark:text-gray-200 p-4 rounded-lg shadow-md flex items-center gap-4"
+            className="bg-white dark:bg-zinc-800 dark:text-gray-200 p-4 rounded-lg shadow-md flex items-center gap-4"
           >
             <div
               className="w-12 h-12 flex items-center justify-center rounded-full dark:text-black"
@@ -43,7 +43,7 @@ const ECommerce = () => {
       {/* Revenue Section */}
       <div className="flex flex-col sm:flex-row gap-6 justify-between items-center sm:items-start mx-auto max-w-full">
         {/* Left Side */}
-        <div className="bg-white dark:text-gray-200 dark:bg-zinc-700 rounded-2xl w-full sm:w-[48%] p-4">
+        <div className="bg-white dark:text-gray-200 dark:bg-zinc-800 rounded-2xl w-full sm:w-[48%] p-4">
           <p className="font-semibold text-xl">Revenue Updates</p>
           <div className="mt-4">
             <p>
@@ -89,15 +89,15 @@ const ECommerce = () => {
         </div>
 
         {/* Right Side */}
-        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl w-full sm:w-[48%] p-4">
+        <div className="bg-white dark:text-gray-200 dark:bg-zinc-800 rounded-2xl w-full sm:w-[48%] p-4">
           <div className="mt-4 flex justify-start gap-4">
-            <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
+            <p className="flex items-center gap-2 text-gray-600 dark:text-gray-200 hover:drop-shadow-xl">
               <span className="font-extrabold text-2xl">
                 <BsDot />
               </span>
               <span>Expense</span>
             </p>
-            <p className="flex items-center gap-2 text-green-400 hover:drop-shadow-xl">
+            <p className="flex items-center gap-2 text-[#03C9D7] hover:drop-shadow-xl">
               <span className="font-extrabold text-2xl">
                 <BsDot />
               </span>
@@ -107,7 +107,7 @@ const ECommerce = () => {
 
           {/* Stacked Chart */}
           <div className="mt-10">
-            <Stacked />
+            <Stacked width={500} height={300}/>
           </div>
         </div>
       </div>

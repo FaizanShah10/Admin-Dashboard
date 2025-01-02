@@ -22,6 +22,7 @@ import Area from './Charts/Area';
 import { useStateContext } from './Context/ContextProvider'
 import ThemeSetting from './Components/ThemeSetting';
 import Pie from './Charts/Pie';
+import Bar from './Charts/Bar'
 
 const App = () => {
 
@@ -96,12 +97,9 @@ const App = () => {
               {/* charts  */}
               <Route path="/line" element={<Line/>} />
               <Route path="/area" element={<Area/>} />
-              <Route path="/bar" element={"bar"} />
+              <Route path="/bar" element={<Bar/>} />
               <Route path="/pie" element={<Pie/>} />
-              <Route path="/financial" element={"Financial"} />
-              <Route path="/color-mapping" element={"color Mapping"} />
               <Route path="/pyramid" element={"pyramid"} />
-              <Route path="/stacked" element={"stacked"} />
 
             </Routes>
           </div>
