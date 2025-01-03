@@ -511,10 +511,6 @@ export const links = [
         name: 'editor',
         icon: <FiEdit />,
       },
-      {
-        name: 'color-picker',
-        icon: <BiColorFill />,
-      },
     ],
   },
   {
@@ -536,22 +532,6 @@ export const links = [
       {
         name: 'pie',
         icon: <FiPieChart />,
-      },
-      {
-        name: 'financial',
-        icon: <RiStockLine />,
-      },
-      {
-        name: 'color-mapping',
-        icon: <BsBarChart />,
-      },
-      {
-        name: 'pyramid',
-        icon: <GiLouvrePyramid />,
-      },
-      {
-        name: 'stacked',
-        icon: <AiOutlineBarChart />,
       },
     ],
   },

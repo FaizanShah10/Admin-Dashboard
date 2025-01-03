@@ -41,7 +41,7 @@ const ECommerce = () => {
       </div>
 
       {/* Revenue Section */}
-      <div className="flex flex-col sm:flex-row gap-6 justify-between items-center sm:items-start mx-auto max-w-full">
+      <div className="flex flex-col sm:flex-row gap-6 lg:flex-nowrap justify-between items-center sm:items-start mx-auto max-w-full">
         {/* Left Side */}
         <div className="bg-white dark:text-gray-200 dark:bg-zinc-800 rounded-2xl w-full sm:w-[48%] p-4">
           <p className="font-semibold text-xl">Revenue Updates</p>
