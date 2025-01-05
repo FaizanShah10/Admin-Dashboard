@@ -33,8 +33,8 @@ const Customers = () => {
 
   return (
     <div>
-      <div className="w-full h-32 bg-gray-200 dark:bg-zinc-800 rounded-md text-black dark:text-gray-200 flex justify-center items-center mb-10">
-        <h2 className="text-3xl font-semibold">Customers</h2>
+      <div className="w-full h-24 md:h-32 bg-gray-200 dark:bg-zinc-800 dark:text-gray-200 rounded-md text-black flex justify-center items-center mb-10">
+        <h2 className="text-2xl md:text-3xl font-semibold">Customers</h2>
       </div>
       <div className="relative overflow-x-auto p-10 rounded-md bg-gray-100 dark:bg-zinc-900 m-10">
         <div className="mb-2 flex items-center gap-3">

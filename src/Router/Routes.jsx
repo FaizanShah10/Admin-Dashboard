@@ -46,7 +46,6 @@ const router = createBrowserRouter([
       </ProtectedRoute>
     ),
     children: [
-      // Redirect root "/" to "/login"
       { index: true, element: <Navigate to="/login" replace /> },
 
       { path: '/ecommerce', element: <ECommerce /> },

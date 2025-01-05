@@ -13,7 +13,7 @@ const Stacked = ({width, height}) => {
   return (
     
       <div  style={{ width: '100%', overflowX: 'auto' }}>
-        <div style={{ minWidth: 320, maxWidth: '100%', height: 'auto' }}>
+        <div style={{ minWidth: 300, maxWidth: '100%', height: 'auto' }}>
           <BarChart
             width={width}
             height={height}

@@ -9,6 +9,8 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import avatar from '../data/avatar.jpg';
 import { useStateContext } from '../Context/ContextProvider';
 
+import {auth} from '../firebase'
+
 const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
   <div content={title} position="BottomCenter">
     <button
@@ -27,6 +29,9 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 );
 
 const Navbar = () => {
+
+  const user = auth.currentUser
+
   const {
     activeMenu,
     setActiveMenu,
@@ -82,7 +87,7 @@ const Navbar = () => {
             <p>
               <span className="text-gray-400 text-14">Hi,</span>{' '}
               <span className="text-gray-400 font-bold ml-1 text-14">
-                Michael
+                {user.displayName}
               </span>
             </p>
             <MdKeyboardArrowDown className="text-gray-400 text-14" />

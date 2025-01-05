@@ -37,8 +37,8 @@ const Login = () => {
 
   return (
     <div className="h-screen w-full bg-gray-100 flex items-center justify-center">
-      <div className="h-[85vh] w-[80vw] bg-white rounded-3xl flex shadow-2xl p-4">
-        <div className="h-full w-1/2 bg-orange-500 rounded-3xl overflow-hidden">
+      <div className="h-[85vh] w-[90vw] lg:w-[80vw] bg-white rounded-3xl flex shadow-2xl p-4">
+        <div className="hidden lg:flex-col md:flex h-full w-1/2 bg-orange-500 rounded-3xl overflow-hidden">
           <h2 className="text-left ml-10 mt-20 text-5xl font-bold text-white leading-normal">
             Simplify <br /> management with <br /> our Dashboard
           </h2>
@@ -47,7 +47,9 @@ const Login = () => {
             Simplify your e-commerce management with our user-friendly admin dashboard
           </p>
         </div>
-        <div className="h-full w-1/2 bg-transparent">
+
+        {/* Login Form */}
+        <div className="h-full w-full lg:w-1/2 bg-transparent">
           <div className="flex justify-center items-center h-full bg-white">
             <div className="w-[85%] max-w-[400px]">
               <div className="flex justify-center items-center mb-6">

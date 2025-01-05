@@ -9,7 +9,6 @@ import { useStateContext } from '../Context/ContextProvider';
 const ECommerce = () => {
 
   const {currentColor} = useStateContext()
-
   return (
     <div className="p-4">
       {/* Cards Section */}
