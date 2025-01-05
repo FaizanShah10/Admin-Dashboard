@@ -20,11 +20,11 @@ const Sidebar = () => {
     'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-200 hover:text-black hover:bg-gray-100 dark:hover:text-black m-2';
 
   return (
-    <div className="ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10">
+    <div className="h-screen bg-white dark:bg-zinc-900 md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10">
       {activeMenu && (
         <>
           <div className="flex justify-between items-center">
-            <Link to="/" onClick={handleCloseSideBar} className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900">
+            <Link to="/ecommerce" onClick={handleCloseSideBar} className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900">
               <SiShopware /> <span>Shoppy</span>
             </Link>
             <div content="Menu" position="BottomCenter">

@@ -11,7 +11,7 @@ const Bar = () => {
   const { currentMode } = useStateContext()
     
   return (
-    <div className='flex justify-center items-center h-screen bg-gray-100'  
+    <div className='flex justify-center items-center h-screen bg-gray-100 dark:bg-zinc-800'  
     style={{ width: '100%', overflowX: 'auto' }}>
     <div style={{ minWidth: 320, maxWidth: '100%', height: 'auto' }}>
       <BarChart
