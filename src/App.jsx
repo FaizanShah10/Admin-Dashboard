@@ -7,8 +7,9 @@ import Navbar from './Components/Navbar';
 import Sidebar from './Components/Sidebar';
 import ThemeSetting from './Components/ThemeSetting';
 import { useStateContext } from './Context/ContextProvider';
-import { onAuthStateChanged } from "firebase/auth";
+import {  onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
+
 
 const MainLayout = () => {
 

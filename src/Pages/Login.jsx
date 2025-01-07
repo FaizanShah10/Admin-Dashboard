@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import { FiEye, FiEyeOff } from 'react-icons/fi';
 import { FaFacebook } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { useNavigate } from 'react-router-dom'; // For navigation
-import { auth } from '../firebase'; // Import Firebase authentication
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom'; 
+import { auth } from '../firebase'; 
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate(); 
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
