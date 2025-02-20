@@ -5,6 +5,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom'; 
 import { auth } from '../firebase'; 
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -119,9 +120,11 @@ const Login = () => {
               <div className="text-center mt-6">
                 <p className="text-gray-500 text-sm">
                   Don’t have an account?{' '}
-                  <a href="/signup" className="text-orange-500 font-medium hover:underline">
-                    Signup
-                  </a>
+                  <Link to='/signup'>
+                    <a className="text-orange-500 font-medium hover:underline">
+                      Signup
+                    </a>
+                  </Link>
                 </p>
               </div>
             </div>
